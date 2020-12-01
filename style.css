@@ -61,3 +61,124 @@ nav ul li a {
 nav ul li a:hover {
   text-decoration: underline;
 }
+
+header {
+  background-color: var(--primary-color);
+  color: #fff;
+  font-size: 130%;
+  /* Since toggle button will be positioned absolute */
+  position: relative;
+  padding: 40px 15px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+}
+
+header p {
+  margin: 30px 0;
+}
+
+button,
+input[type='submit'] {
+  background-color: var(--secondary-color);
+  border: 0;
+  border-radius: 5px;
+  color: #fff;
+  cursor: #fff;
+  padding: 8px 12px;
+}
+
+button:focus {
+  /* https://stackoverflow.com/questions/35648667/outline-none-vs-outline-0 */
+  outline: 0;
+}
+
+.toggle {
+  background-color: rgba(0, 0, 0, 0.3);
+  /* header is positioned relative, so this button can be positioned absolute relative to it */
+  /* https://css-tricks.com/absolute-relative-fixed-positioining-how-do-they-differ/#absolute */
+  position: absolute;
+  top: 20px;
+  left: 20px;
+}
+
+.cta-btn {
+  padding: 12px 30px;
+  font-size: 20px;
+}
+
+.container {
+  padding: 15px;
+  margin: 0 auto;
+  max-width: 100%;
+  width: 800px;
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal {
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  /* Positioned relative to the nearest positioned ancestor, .modal-container */
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  /* translate(-50%, -50%) will move modal to the left by 50% of its width and to the top by 50% of its height. So if you add left 50%, modal left side will be positioned 50% from the document left side and to move it to the center you need to move modal by half of its width to the left and translate -50% on x axis does just that; with top 50%, you move it to the 50% from the document top side and with translate -50% on y axis you move modal by half of its height to the top */
+  transform: translate(-50%, -50%);
+  max-width: 100%;
+  width: 400px;
+}
+
+.modal-header {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 15px;
+}
+
+.modal-header h3 {
+  margin: 0;
+  border-bottom: 1px solid #333;
+}
+
+.modal-content {
+  padding: 20px;
+}
+
+.modal-form div {
+  margin: 15px 0;
+}
+
+.modal-form label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.modal-form .form-input {
+  padding: 8px;
+  width: 100%;
+}
+
+.close-btn {
+  background: transparent;
+  font-size: 30px;
+  /* To position child with position absolute parent element can have position relative or position absolute. If you don't add position relative or absolute to container then child is positioned relative to the document */
+  position: absolute;
+  right: 5px;
+  top: 2px;
+}
+
+.close-btn i {
+  cursor: pointer;
+}
