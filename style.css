@@ -205,3 +205,16 @@ button {
     opacity: 1;
   }
 }
+
+/* Mobile (corresponds to Bootstrap 4 breakpoint for small devices, smaller than tablets) */
+@media screen and (max-width: 767px) {
+  .toggle {
+    top: 10px;
+    left: 200px;
+  }
+
+  h1 {
+    /* Typically 2em; scaling down so toggle button is easier to see */
+    font-size: 1.5em;
+  }
+}
