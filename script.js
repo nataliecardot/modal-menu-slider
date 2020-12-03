@@ -17,3 +17,11 @@ open.addEventListener('click', () => modal.classList.add('show-modal'));
 
 // Hide modal
 close.addEventListener('click', () => modal.classList.remove('show-modal'));
+
+// Hide modal on outside click (entire area outside modal that appears is div with class .modal-container and id #modal)
+window.addEventListener(
+  'click',
+  (e) => e.target == modal && modal.classList.remove('show-modal')
+);
+
+console.log(event.target);
