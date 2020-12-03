@@ -149,7 +149,7 @@ button:focus {
   transform: translate(-50%, -50%);
   max-width: 100%;
   width: 400px;
-  /* Corresponds to keyframes for modalopen */
+  /* Specifies keyframes name */
   animation-name: modalopen;
   animation-duration: var(--modal-duration);
 }
