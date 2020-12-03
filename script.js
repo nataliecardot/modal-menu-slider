@@ -11,3 +11,9 @@ toggle.addEventListener('click', () => {
     ? (toggle.innerHTML = '<i class="fas fa-times fa-2x"></i>')
     : (toggle.innerHTML = '<i class="fas fa-bars fa-2x"></i>');
 });
+
+// Show modal (sign up button has id of open)
+open.addEventListener('click', () => modal.classList.add('show-modal'));
+
+// Hide modal
+close.addEventListener('click', () => modal.classList.remove('show-modal'));
